@@ -2255,7 +2255,7 @@ run(function()
         store.attackReach = (actualDistance * 100) // 1 / 100
         store.attackReachUpdate = tick() + 1
 
-        if actualDistance > 14.4 and actualDistance <= 30 then
+        if actualDistance > 14.6 and actualDistance <= 30 then
             local direction = (targetpos - selfpos).Unit
             
             local moveDistance = math.min(actualDistance - 14.3, 8) 
@@ -2798,7 +2798,7 @@ run(function()
 	local MaxRange = 0
 	local CE = false
 	if role ~= "owner" and role ~= "coowner" and role ~= "admin" and role ~= "friend" and role ~= "premium" and role ~= "user"  then
-		MaxRange = 12
+		MaxRange = 25
 		CE = false
 		SyncHit = {Enabled = false}
 	elseif role == "user" then
