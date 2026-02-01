@@ -6049,6 +6049,11 @@ mainapi.RainbowMode = guipane:CreateDropdown({
 	List = {'Normal', 'Gradient', 'Retro'},
 	Tooltip = 'Normal - Smooth color fade\nGradient - Gradient color fade\nRetro - Static color'
 })
+mainapi:CreateCategory({
+	Name = 'Kits',
+	Icon = getcustomasset('newvape/assets/new/targetnpc1.png'),
+	Size = UDim2.fromOffset(14, 14)
+})																							
 mainapi.RainbowSpeed = guipane:CreateSlider({
 	Name = 'Rainbow speed',
 	Min = 0.1,
@@ -6057,6 +6062,12 @@ mainapi.RainbowSpeed = guipane:CreateSlider({
 	Default = 1,
 	Tooltip = 'Adjusts the speed of rainbow values'
 })
+mainapi:CreateCategory({
+	Name = 'AltFarm',
+	Icon = getcustomasset('newvape/assets/new/af.png'),
+	Size = UDim2.fromOffset(20, 20),
+	Position = UDim2.fromOffset(10,10)
+})																							
 mainapi.RainbowUpdateSpeed = guipane:CreateSlider({
 	Name = 'Rainbow update rate',
 	Min = 1,
@@ -6085,9 +6096,11 @@ guipane:CreateButton({
 			UtilityCategory = 5,
 			WorldCategory = 6,
 			InventoryCategory = 7,
-			MinigamesCategory = 8,
-			FriendsCategory = 9,
-			ProfilesCategory = 10
+			MinigamesCategory= 8,
+			BetterKitsCategory = 9,																									
+			AltFarmCategory =10,																										
+			FriendsCategory = 11,
+			ProfilesCategory = 12
 		}
 		local categories = {}
 		for _, v in mainapi.Categories do
