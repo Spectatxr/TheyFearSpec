@@ -2080,8 +2080,10 @@ run(function()
 	})
 end)
 																				
-local Killaura
+local Killaura																				local Killaura
 local ChargeTime
+
+
 
 run(function()
 	local CanHit = true
@@ -2791,10 +2793,11 @@ run(function()
 		Tooltip = 'enables the after swing feature',
 		Function = function(v)
 			ASMS.Object.Visible = v
-	end
-	      })
+		end
+	})
 	local MaxRange = 0
 	local CE = false
+	if role ~= "owner" and role ~= "coowner" and role ~= "admin" and role ~= "friend" and role ~= "premium" and role ~= "user"  then
 		MaxRange = 12
 		CE = false
 		SyncHit = {Enabled = false}
@@ -2806,6 +2809,7 @@ run(function()
 			Tooltip = "Synchronize's ur hit time",
 			Default = false,
 		})
+	elseif role == "premium" then
 		MaxRange = 17
 		CE = true
 		SyncHit = Killaura:CreateToggle({
@@ -2813,6 +2817,7 @@ run(function()
 			Tooltip = "Synchronize's ur hit time",
 			Default = false,
 		})
+	elseif role == "friend" or role == "admin" or role == "coowner" or role == "owner" then
 		MaxRange = 20
 		CE = true
 		SyncHit = Killaura:CreateToggle({
@@ -2824,7 +2829,7 @@ run(function()
 		MaxRange = 12
 		SyncHit = {Enabled = false}
 	end
-		})																								
+
 	SwingRange = Killaura:CreateSlider({
 		Name = 'Swing range',
 		Min = 1,
@@ -2838,7 +2843,7 @@ run(function()
 			if Visualiser and VisualiserRange.Enabled then
 				Visualiser.Size = Vector3.new(val * 0.7, 0.01, val * 0.7)
 			else
-				--warn('blackout')
+				--warn('jewish boy')
 			end
 		end
 	})
