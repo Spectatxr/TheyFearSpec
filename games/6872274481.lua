@@ -2795,6 +2795,21 @@ run(function()
 			ASMS.Object.Visible = v
 		end
 	})
+	local MaxRange = 0
+	local CE = false
+	if role ~= "owner" and role ~= "coowner" and role ~= "admin" and role ~= "friend" and role ~= "premium" and role ~= "user"  then
+		MaxRange = 12
+		CE = false
+		SyncHit = {Enabled = false}
+	elseif role == "user" then
+		MaxRange = 16
+		CE = false
+		SyncHit = Killaura:CreateToggle({
+			Name = 'Sync Hit-Time',
+			Tooltip = "Synchronize's ur hit time",
+			Default = false,
+		})
+	elseif role == "premium" then
 		MaxRange = 17
 		CE = true
 		SyncHit = Killaura:CreateToggle({
@@ -2803,8 +2818,18 @@ run(function()
 			Default = false,
 		})
 	elseif role == "friend" or role == "admin" or role == "coowner" or role == "owner" then
- end																											
-})																																																																														
+		MaxRange = 20
+		CE = true
+		SyncHit = Killaura:CreateToggle({
+			Name = 'Sync Hit-Time',
+			Tooltip = "Synchronize's ur hit time",
+			Default = false,
+		})
+	else
+		MaxRange = 12
+		SyncHit = {Enabled = false}
+	end
+																											
 	SwingRange = Killaura:CreateSlider({
 		Name = 'Swing range',
 		Min = 1,
