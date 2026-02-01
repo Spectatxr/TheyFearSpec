@@ -5797,6 +5797,17 @@ mainapi:CreateCategory({
 	Icon = getcustomasset('newvape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
 })
+mainapi:CreateCategory({
+	Name = 'Kits',
+	Icon = getcustomasset('newvape/assets/new/targetnpc1.png'),
+	Size = UDim2.fromOffset(14, 14)
+})										
+mainapi:CreateCategory({
+	Name = 'AltFarm',
+	Icon = getcustomasset('newvape/assets/new/af.png'),
+	Size = UDim2.fromOffset(20, 20),
+	Position = UDim2.fromOffset(10,10)
+})							
 mainapi.Categories.Main:CreateDivider('misc')
 
 --[[
@@ -6048,12 +6059,7 @@ mainapi.RainbowMode = guipane:CreateDropdown({
 	Name = 'Rainbow Mode',
 	List = {'Normal', 'Gradient', 'Retro'},
 	Tooltip = 'Normal - Smooth color fade\nGradient - Gradient color fade\nRetro - Static color'
-})
-mainapi:CreateCategory({
-	Name = 'Kits',
-	Icon = getcustomasset('newvape/assets/new/targetnpc1.png'),
-	Size = UDim2.fromOffset(14, 14)
-})																							
+})																				
 mainapi.RainbowSpeed = guipane:CreateSlider({
 	Name = 'Rainbow speed',
 	Min = 0.1,
@@ -6061,12 +6067,6 @@ mainapi.RainbowSpeed = guipane:CreateSlider({
 	Decimal = 10,
 	Default = 1,
 	Tooltip = 'Adjusts the speed of rainbow values'
-})
-mainapi:CreateCategory({
-	Name = 'AltFarm',
-	Icon = getcustomasset('newvape/assets/new/af.png'),
-	Size = UDim2.fromOffset(20, 20),
-	Position = UDim2.fromOffset(10,10)
 })																							
 mainapi.RainbowUpdateSpeed = guipane:CreateSlider({
 	Name = 'Rainbow update rate',
