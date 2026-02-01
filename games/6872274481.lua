@@ -2525,7 +2525,7 @@ run(function()
 										if CanHit then
 											local Delay = (MutiAuraDelay.Value / 1000)
 											local rng = math.random(0,100)
-											if rng >= 58 then -- TEMP NUMBER FOR NOW
+											if rng >= 67 then -- TEMP NUMBER FOR NOW
 												if isAde then
 													local Data = {
 														weapon = sword.tool,
@@ -2798,11 +2798,11 @@ run(function()
 	local MaxRange = 0
 	local CE = false
 	if role ~= "owner" and role ~= "coowner" and role ~= "admin" and role ~= "friend" and role ~= "premium" and role ~= "user"  then
-		MaxRange = 12
+		MaxRange = 28
 		CE = false
 		SyncHit = {Enabled = false}
 	elseif role == "user" then
-		MaxRange = 16
+		MaxRange = 28
 		CE = false
 		SyncHit = Killaura:CreateToggle({
 			Name = 'Sync Hit-Time',
@@ -2810,7 +2810,7 @@ run(function()
 			Default = false,
 		})
 	elseif role == "premium" then
-		MaxRange = 17
+		MaxRange = 28
 		CE = true
 		SyncHit = Killaura:CreateToggle({
 			Name = 'Sync Hit-Time',
@@ -2818,7 +2818,7 @@ run(function()
 			Default = false,
 		})
 	elseif role == "friend" or role == "admin" or role == "coowner" or role == "owner" then
-		MaxRange = 20
+		MaxRange = 28
 		CE = true
 		SyncHit = Killaura:CreateToggle({
 			Name = 'Sync Hit-Time',
@@ -2826,7 +2826,7 @@ run(function()
 			Default = false,
 		})
 	else
-		MaxRange = 12
+		MaxRange = 28
 		SyncHit = {Enabled = false}
 	end
 
@@ -2852,7 +2852,7 @@ run(function()
 		Min = 1,
 		Max = MaxRange,
 		Edit = CE,
-		Default = 18,
+		Default = 28,
 		Suffix = function(val)
 			return val == 1 and 'stud' or 'studs'
 		end
@@ -2897,8 +2897,8 @@ run(function()
 	UpdateRate = Killaura:CreateSlider({
 		Name = 'Update rate',
 		Min = 1,
-		Max = 360,
-		Default = 60,
+		Max = 500,
+		Default = 490,
 		Suffix = 'hz'
 	})
 	MaxTargets = Killaura:CreateSlider({
