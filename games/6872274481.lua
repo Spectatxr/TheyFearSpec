@@ -2881,7 +2881,7 @@ run(function()
 	})
 	MutiAura = Killaura:CreateToggle({
 		Name = "MutiAura",
-		Tooltip = 'you need projectiles for this',
+		Tooltip = 'Dont use it will slow ka',
 		Default = false,
 
 		Function = function(v)
