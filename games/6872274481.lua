@@ -2795,23 +2795,9 @@ run(function()
 			ASMS.Object.Visible = v
 		end
 	})
-	local MaxRange = 0
-	local CE = false
-	if role ~= "owner" and role ~= "coowner" and role ~= "admin" and role ~= "friend" and role ~= "premium" and role ~= "user"  then
-		MaxRange = 28
-		CE = false
-		SyncHit = {Enabled = false}
 	elseif role == "user" then
 		MaxRange = 28
 		CE = false
-		SyncHit = Killaura:CreateToggle({
-			Name = 'Sync Hit-Time',
-			Tooltip = "Synchronize's ur hit time",
-			Default = false,
-		})
-	elseif role == "premium" then
-		MaxRange = 28
-		CE = true
 		SyncHit = Killaura:CreateToggle({
 			Name = 'Sync Hit-Time',
 			Tooltip = "Synchronize's ur hit time",
