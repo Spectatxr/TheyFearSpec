@@ -2083,8 +2083,6 @@ end)
 local Killaura
 local ChargeTime
 
-
-
 run(function()
 	local CanHit = true
 	local MutiAura
@@ -2793,8 +2791,8 @@ run(function()
 		Tooltip = 'enables the after swing feature',
 		Function = function(v)
 			ASMS.Object.Visible = v
-		end
-	})
+	end
+	      })
 	local MaxRange = 0
 	local CE = false
 		MaxRange = 12
