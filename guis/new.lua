@@ -5798,7 +5798,7 @@ mainapi:CreateCategory({
 	Size = UDim2.fromOffset(19, 12)
 })
 mainapi:CreateCategory({
-	Name = 'Kits',
+	Name = 'BetterKits',
 	Icon = getcustomasset('newvape/assets/new/targetnpc1.png'),
 	Size = UDim2.fromOffset(14, 14)
 })										
