@@ -2826,7 +2826,7 @@ run(function()
 		MaxRange = 12
 		SyncHit = {Enabled = false}
 	end
-
+		})																								
 	SwingRange = Killaura:CreateSlider({
 		Name = 'Swing range',
 		Min = 1,
@@ -2840,7 +2840,7 @@ run(function()
 			if Visualiser and VisualiserRange.Enabled then
 				Visualiser.Size = Vector3.new(val * 0.7, 0.01, val * 0.7)
 			else
-				--warn('bro what ')
+				--warn('blackout')
 			end
 		end
 	})
