@@ -5796,18 +5796,7 @@ mainapi:CreateCategory({
 	Name = 'Minigames',
 	Icon = getcustomasset('newvape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
-})
-mainapi:CreateCategory({
-	Name = 'BetterKits',
-	Icon = getcustomasset('newvape/assets/new/targetnpc1.png'),
-	Size = UDim2.fromOffset(14, 14)
-})										
-mainapi:CreateCategory({
-	Name = 'AltFarm',
-	Icon = getcustomasset('newvape/assets/new/af.png'),
-	Size = UDim2.fromOffset(20, 20),
-	Position = UDim2.fromOffset(10,10)
-})							
+})												
 mainapi.Categories.Main:CreateDivider('misc')
 
 --[[
@@ -6096,11 +6085,9 @@ guipane:CreateButton({
 			UtilityCategory = 5,
 			WorldCategory = 6,
 			InventoryCategory = 7,
-			MinigamesCategory= 8,
-			BetterKitsCategory = 9,																									
-			AltFarmCategory =10,																										
-			FriendsCategory = 11,
-			ProfilesCategory = 12
+			MinigamesCategory= 8,																																																
+			FriendsCategory = 9,
+			ProfilesCategory = 10
 		}
 		local categories = {}
 		for _, v in mainapi.Categories do
